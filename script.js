@@ -29,17 +29,15 @@ function addItem(e)
     const id = new Date().getTime().toString()
     if(value && !editFlag)
     {
-
         createListItem(id, value);
-// display alert
-displayAlert('item added to the list', 'success');
-// show container
-container.classList.add("show-container");
-// add to local storage
-
-addToLocalStorage(id,value);
-// set back to default
-setBackToDefault();
+        // display alert
+        displayAlert('item added to the list', 'success');
+        // show container
+        container.classList.add("show-container");
+        // add to local storage
+        addToLocalStorage(id,value);
+        // set back to default
+        setBackToDefault();
     }
     else if(value && editFlag)
     {
@@ -54,6 +52,7 @@ setBackToDefault();
         displayAlert("please enter value", "danger");
     }
 }
+
 // display alert
 function displayAlert(text, action)
 {
@@ -84,6 +83,7 @@ function clearItems()
     setBackToDefault();
     localStorage.removeItem('list');
 }
+
 // delete function
 function deleteItem(e)
 {
@@ -100,6 +100,7 @@ function deleteItem(e)
     // remove from local storage
     removeFromLocalStorage(id);
 }
+
 // edit function
 function editItem(e)
 {
@@ -112,6 +113,7 @@ function editItem(e)
     editID = element.dataset.id;
     submitBtn.textContent = "edit";
 }
+
 // set back to default
 function setBackToDefault()
 {
@@ -121,8 +123,9 @@ function setBackToDefault()
     submitBtn.textContent = "submit";
 }
 
-
 // ****** LOCAL STORAGE **********
+
+// create items
 function addToLocalStorage(id, value)
 {
     const grocery = { id, value };
@@ -134,6 +137,7 @@ function addToLocalStorage(id, value)
     //console.log('added to local storage');
 }
 
+// delete items
 function removeFromLocalStorage(id)
 {
     let items = getLocalStorage();
@@ -146,6 +150,7 @@ function removeFromLocalStorage(id)
 localStorage.setItem('list',JSON.stringify(items));
 }
 
+// update items
 function editLocalStorage(id,value)
 {
     let items = getLocalStorage();
@@ -158,14 +163,16 @@ function editLocalStorage(id,value)
     localStorage.setItem("list", JSON.stringify(items));
 }
 
+//get items
 function getLocalStorage(){
     return localStorage.getItem("list")
     ? JSON.parse(localStorage.getItem('list'))
     : [];
 }
 
-
 // ****** SETUP ITEMS **********
+
+//create local storage items
 function setupItems(){
 let items = getLocalStorage();
 if(items.length >0) {
@@ -176,7 +183,7 @@ container.classList.add('show-container');
  }
 }
 
-
+//create UI item
 function createListItem(id, value)
 {
     const element = document.createElement('article');
