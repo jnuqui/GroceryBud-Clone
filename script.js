@@ -164,15 +164,6 @@ function getLocalStorage(){
     : [];
 }
 
-// localStorage API
-// setItem
-// getItem
-// removeItem
-// save as strings
-/* localStorage.setItem("fruit",JSON.stringify(["kiwi", "apple"]));
-const fruits = JSON.parse(localStorage.getItem('fruit'));
-console.log(fruits);
-localStorage.removeItem("fruit"); */
 
 // ****** SETUP ITEMS **********
 function setupItems(){
@@ -184,6 +175,7 @@ createListIte(item.id, item.value)
 container.classList.add('show-container');
  }
 }
+
 
 function createListItem(id, value)
 {
