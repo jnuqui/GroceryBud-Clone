@@ -2,7 +2,7 @@
 
 This is a project created using a tutorial by freeCodeCamps.org.
 
-Link:
+Tutorial Link:
 https://www.youtube.com/watch?v=3PHXvlpOkf4&t=22703s
 
 The app uses vanilla JavaScript to create a simple grocery list using CRUD operations. It utilizes functions to create UI components, Local Storage operations, and display alert banners. The app was created entirely by following the video.
