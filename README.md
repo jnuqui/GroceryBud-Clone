@@ -1,6 +1,6 @@
 # "Grocery Bud"
 
-This is a project created using a tutorial by freeCodeCamps.org.
+This is a project created using a tutorial by freeCodeCamp.org.
 
 Tutorial Link:
 https://www.youtube.com/watch?v=3PHXvlpOkf4&t=22703s
